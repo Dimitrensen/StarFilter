@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const url = 'https://api.github.com/users/USER/starred?page='
 
-async function getStarredRepos(user, itterations) {
+async function get_starred_repos(user, itterations) {
   const calls = []
   for (let index = 0; index < itterations; index++) {
     try {
@@ -33,5 +33,3 @@ function filter_data(data) {
     homepage: data.homepage,
   }
 }
-
-getStarredRepos('alpap', 10).then((data) => console.log(data))
