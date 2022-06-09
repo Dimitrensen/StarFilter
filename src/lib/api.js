@@ -23,7 +23,7 @@ function filter_data(data) {
     name: data.name,
     description: data.description,
     open_issues: data.open_issues_count,
-    toics: data.topics,
+    topics: data.topics,
     license: data.license,
     archived: data.archived,
     language: data.language,
@@ -33,3 +33,5 @@ function filter_data(data) {
     homepage: data.homepage,
   }
 }
+
+getStarredRepos('alpap', 10).then((data) => console.log(data))
